@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3321590}
   - component: {fileID: 2386206}
   - component: {fileID: 13649250}
+  - component: {fileID: 9023642436879893179}
   m_Layer: 0
   m_Name: pinetree02
   m_TagString: tree
@@ -118,6 +119,19 @@ CapsuleCollider:
   m_Height: 2.35
   m_Direction: 1
   m_Center: {x: 0.06, y: 0.97, z: 0.13}
+--- !u!114 &9023642436879893179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e349ce910f4f8ff4ea5ffc5e15c1d082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wood: {fileID: 111370, guid: 0f4bf67a90c1de349b4a7f4a21c85146, type: 3}
 --- !u!21 &2104512
 Material:
   serializedVersion: 8
