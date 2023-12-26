@@ -36,7 +36,7 @@ public class Inventory : MonoBehaviour
     void Start()
     {
         isOpen = false;
-
+        
         PopulateSlotList();
 
     }
@@ -128,7 +128,50 @@ public class Inventory : MonoBehaviour
 
     }
 
+    public void RemoveItem(string nameToRemove, int amountToRemove)
+    {
+        int counter = amountToRemove;
 
+        for (var i = slotList.Count - 1; i >= 0; i--)
+        {
+            if (slotList[i].transform.childCount > 0)
+            {
+                if (slotList[i].transform.GetChild(0).name == nameToRemove + "(Clone)" && counter != 0)
+                {
+                    Destroy(slotList[i].transform.GetChild(0).gameObject);
+
+                    counter -= 1;
+
+                }
+            }
+        }
+
+    }
+
+    public void ReCalculeList()
+    {
+        itemList.Clear();
+
+        foreach (GameObject slot in slotList)
+        {
+            if (slot.transform.childCount > 0)
+            {
+
+                string name = slot.transform.GetChild(0).name; //Stone(Clone)
+
+                string str1 = name;
+                string str2 = "(Clone)";
+
+                string result = name.Replace(str2,"");
+
+                itemList.Add(result);
+
+            }
+
+        }
+
+
+    }
 
 
 }

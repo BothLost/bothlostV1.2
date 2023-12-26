@@ -78,7 +78,7 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
             GameObject player = GameObject.FindGameObjectWithTag("Player");
 
             Debug.Log(player.transform.position + new Vector3(0, 1, 0)+ "pozisyonuna " + tag + " tagine sahib bir obje olusturulcak");
-            Instantiate(targetItem, player.transform.position + new Vector3(0, 2, 0), Quaternion.identity);
+            Instantiate(targetItem, player.transform.position + player.transform.forward*2, Quaternion.identity);
             Destroy(gameObject);
         }
     }
