@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
+public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler, IPointerClickHandler
 {
 
-
+    public GameObject targetItem;
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
 
@@ -64,6 +64,23 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
         Debug.Log("OnEndDrag");
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (eventData.button == PointerEventData.InputButton.Right)
+        {
+            //önce þuanki itemin tagini al
+            string tag = gameObject.tag;
+           
+            
+            // uygun poziyonaa spwawn et
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+            Debug.Log(player.transform.position + new Vector3(0, 1, 0)+ "pozisyonuna " + tag + " tagine sahib bir obje olusturulcak");
+            Instantiate(targetItem, player.transform.position + new Vector3(0, 1, 0), Quaternion.identity);
+            Destroy(gameObject);
+        }
     }
 
 

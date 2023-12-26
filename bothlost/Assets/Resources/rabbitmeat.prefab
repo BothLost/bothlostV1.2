@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -4170150470269225247}
   m_Layer: 5
   m_Name: rabbitmeat
-  m_TagString: meatRabbit
+  m_TagString: rabbitmeat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89,6 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bacaad7888a43649be929a413d938c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetItem: {fileID: 2943048346840671760, guid: 534c1f9f1a45c4f429d1b70046850c81, type: 3}
 --- !u!225 &-4170150470269225247
 CanvasGroup:
   m_ObjectHideFlags: 0

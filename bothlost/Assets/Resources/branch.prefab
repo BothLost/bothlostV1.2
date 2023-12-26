@@ -89,6 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bacaad7888a43649be929a413d938c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetItem: {fileID: 175246, guid: d3875b2349e57c249bcd4d3379e3f315, type: 3}
 --- !u!225 &-990818510033152210
 CanvasGroup:
   m_ObjectHideFlags: 0
