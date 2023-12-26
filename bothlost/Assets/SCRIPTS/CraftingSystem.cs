@@ -145,12 +145,15 @@ public class CraftingSystem : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.C) && !isOpen)
         {
-            Debug.Log("i is pressed");
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
             craftingScreenUI.SetActive(true);
             isOpen = true;
         }
         else if (Input.GetKeyDown(KeyCode.C) && isOpen)
         {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
             craftingScreenUI.SetActive(false);
             toolsScreenUI.SetActive(false);
             isOpen = false;
